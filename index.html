@@ -215,7 +215,7 @@
       const chatDiv = document.getElementById("chat");
       const input = document.getElementById("msgInput");
       /*   Conecta ao nosso servidor Node.js */
-      const socket = new WebSocket("ws://localhost:8080");
+      const socket = new WebSocket("wss://teu-projeto-no-render.onrender.com");
       let meuId = null;
 
       socket.onopen = () => {
