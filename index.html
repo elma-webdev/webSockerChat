@@ -88,8 +88,6 @@
         border: 1px solid var(--border);
         box-shadow: var(--shadow);
         overflow-y: auto;
-        overflow-x: hidden;
-        scrollbar-gutter: stable;
         backdrop-filter: blur(18px);
       }
 
@@ -98,11 +96,13 @@
       }
       #chat::-webkit-scrollbar-track {
         background: transparent;
+        margin-block: 10px;
+        
       }
       #chat::-webkit-scrollbar-thumb {
         background: rgba(148, 163, 184, 0.28);
-        border-radius: 999px;
-        border: 2px solid transparent;
+        border-radius: 0px 30px 30px 0px ;
+        border: 2px solid var(--border);
         background-clip: content-box;
       }
 
@@ -220,7 +220,7 @@
       const input = document.getElementById("msgInput");
       /*   Conecta ao nosso servidor Node.js */
       // Substitui a linha antiga por esta:
-const socket = new WebSocket("wss://websocket-fgn7.onrender.com");
+const socket = new WebSocket("https://websocket-fgn7.onrender.com/");
       let meuId = null;
 
       socket.onopen = () => {
